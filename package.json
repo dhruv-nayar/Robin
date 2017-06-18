@@ -1,0 +1,20 @@
+{
+  "name": "Robin",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://dhruv-nayar:TDaan755@github.com/dhruv-nayar/robin.git"
+  },
+  "author": "Dhruv-Nayar",
+  "license": "BSD",
+  "gitHead": "a93b7b54586725d83355d24b28f7e0fad2ad57bd",
+  "dependencies": {
+    "express": "~4.15.3",
+    "connect": "~3.6.2"
+  }
+}
