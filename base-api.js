@@ -1,18 +1,17 @@
 var http = require('http');
 var express = require('express');
-
-var app = express();
 var sys = require('sys');
 var execFile = require('child_process').execFile;
+
 var child;
+var app = express();
 
 runUpgrade = execFile('upgrade/upgrade-robin.txt', function(error,stdout,stderr){
-console.log(stdout);	
-if (error != null){
-		console.log('exec error: '+error);
-	}
-});
-
+	console.log(stderr);	
+	if (error != null){
+			console.log('exec error: '+error);
+		}
+	});
 
 
 app.use(express['static'](__dirname ));
@@ -21,7 +20,6 @@ app.use(express['static'](__dirname ));
 // Express route for upgrade request
 app.get('/upgrade', function(req, res) {
   res.status(200).send('Upgrade Initiated');
-	console.log('Upgraded');
 	runUpgrade;
 }); 
 
